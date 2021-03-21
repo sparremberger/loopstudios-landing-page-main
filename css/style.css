@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+div {
+    font-family: Josefin Sans;
+    color: white;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section #hero-background {
+    width: 100vw;
+    height: auto;
+}
+
+.hero-section #logo {
+    position: absolute;
+    width: 8em;
+    top: 2.1em;
+    left: 1.2em;
+}
+
+.hero-section #text {
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 0.6em;
+    margin: 0.5em;
+    font-size: 2em;
+}
+
+.vr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    background-color: white;
+}
+
+.vr-section img {
+    padding-top: 5em;
+    width: 80vw;
+}
+
+.vr-section #vr-text {
+    width: 80vw;
+    height: 3em;
+    padding-top: 1.6em;
+    color: rgb(32, 32, 32);
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.vr-section #subtext {
+    font-family: Alata;
+    color: rgb(83, 83, 83);
+    font-size: 0.8em;
+    text-align: center;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    width: fit-content;
+    height: fit-content;
+    overflow-y: hidden;
+}
+
+.creations-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 200vh;
+    background-color: white;
+}
+
+.creations-section #our-creations-text {
+    width: 80vw;
+    padding-top: 1em;
+    padding-bottom: 1.6em;
+    color: rgb(32, 32, 32);
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.creations-section img {
+    width: 80vw;
+    height: auto;
+    overflow: hidden;
+}
+
+.creations-section img:hover  {
+    opacity: 0.5;
+}
+
+.content-box {
+    position: relative;
+    width: 80vw;
+    height: auto;
+    margin-bottom: 1em;
+    overflow: hidden;
+    
+}
+
+.content-box p {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 2.2em;
+    left: 1em;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+.button {
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    padding: 0.4em;
+    border-width: 1px;
+    font-size: 0.8em;
+    font-family: Alata;
+    color: black;
+    width: 8em;
+    margin-top: 0.5em;
+    height: 1.8em;
+}
+
+.button:hover {
+    border-color: white;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    
+}
+
+/* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
+
+/* HAMBURGER */
+.container {
+    display: inline-block;
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 1.4em;
+    height: 0.2em;
+    background-color: rgb(255, 255, 255);
+    margin: 0.3em 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-3px, 3px);
+    transform: rotate(-45deg) translate(-3px, 3px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -4px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
