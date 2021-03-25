@@ -1,4 +1,4 @@
-* {
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -17,12 +17,16 @@ div {
     align-items: center;
 }
 
-.hero-section #hero-background {
+#hero-background {
     width: 100vw;
     height: auto;
 }
 
-.hero-section #logo {
+#hero-background-desktop {
+    display: none;
+}
+
+.logo {
     position: absolute;
     width: 8em;
     top: 2.1em;
@@ -39,7 +43,12 @@ div {
     font-size: 2em;
 }
 
+.hero-section #text-desktop {
+    display: none;
+}
+
 .vr-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,6 +61,11 @@ div {
     width: 80vw;
 }
 
+.vr-section #vr-parent {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
 .vr-section #vr-text {
     width: 80vw;
     height: 3em;
@@ -59,6 +73,8 @@ div {
     color: rgb(32, 32, 32);
     font-size: 1.6em;
     text-align: center;
+
+    margin: auto;
 }
 
 .vr-section #subtext {
@@ -68,7 +84,8 @@ div {
     text-align: center;
     padding-left: 1.2em;
     padding-right: 1.2em;
-    width: fit-content;
+    padding-bottom: 5em;
+    width: inherit;
     height: fit-content;
     overflow-y: hidden;
 }
@@ -80,6 +97,13 @@ div {
     width: auto;
     height: 200vh;
     background-color: white;
+}
+
+.creations-mobile {
+    display: inline;
+}
+.creations-desktop {
+    display: none;
 }
 
 .creations-section #our-creations-text {
@@ -97,7 +121,7 @@ div {
     overflow: hidden;
 }
 
-.creations-section img:hover  {
+.creations-section img:hover {
     opacity: 0.5;
 }
 
@@ -107,7 +131,6 @@ div {
     height: auto;
     margin-bottom: 1em;
     overflow: hidden;
-    
 }
 
 .content-box p {
@@ -117,12 +140,6 @@ div {
     left: 1em;
     font-size: 1.2em;
 }
-
-
-
-
-
-
 
 .button {
     border-style: solid;
@@ -136,6 +153,7 @@ div {
     width: 8em;
     margin-top: 0.5em;
     height: 1.8em;
+    padding-bottom: 1.8em;
 }
 
 .button:hover {
@@ -143,10 +161,7 @@ div {
     background-color: black;
     color: white;
     cursor: pointer;
-    
 }
-
-/* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
 
 /* HAMBURGER */
 .container {
@@ -180,3 +195,199 @@ div {
     -webkit-transform: rotate(45deg) translate(-4px, -4px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+footer {
+    height: 30vh;
+    background-color: black;
+}
+
+@media (min-width: 780px) {
+    .creations-mobile {
+        display: none;
+    }
+    .creations-desktop {
+        display: inline;
+    }
+    .hero-section {
+        width: 100vw;
+        display: inline-block;
+    }
+
+    #hero-background {
+        display: none;
+    }
+
+    .hero-section #hero-background-desktop {
+        display: inline-block;
+        width: 100vw;
+        height: auto;
+    }
+
+    .hero-section #text {
+        display: none;
+    }
+    .hero-section #text-desktop {
+        display: inline;
+        position: absolute;
+        border-style: solid;
+        border-width: 2px;
+        border-color: white;
+        left: 15%;
+        top: 35%;
+        padding: 0.5em;
+        padding-right: 1.6em;
+        max-width: 573px;
+        max-height: 200px;
+        margin: 0;
+        font-size: 3.5em;
+        line-height: 1em;
+    }
+
+    .logo {
+        position: absolute;
+        width: 12em;
+        top: 4.1em;
+        left: 13.2em;
+    }
+
+    .container {
+        display: none;
+    }
+
+    .vr-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        background-color: white;
+    }
+
+    .vr-section img {
+        padding-top: 5em;
+        margin-right: 20vw;
+        width: 60vw;
+    }
+
+    .vr-section #vr-parent {
+        background-color: white;
+
+        margin-left: 10vw;
+        margin-right: 10vw;
+        position: absolute;
+        height: 25em;
+
+        top: 45%;
+        left: 45%;
+        width: 40vw;
+    }
+
+    .vr-section #vr-text {
+        position: relative;
+        width: 40vw;
+        height: 3em;
+        padding-top: 1.6em;
+        color: rgb(32, 32, 32);
+        font-size: 2.4em;
+        text-align: center;
+
+        margin: auto;
+    }
+
+    .vr-section #subtext {
+        font-family: Alata;
+        color: rgb(83, 83, 83);
+        font-size: 0.9em;
+        text-align: justify;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        padding-bottom: 5em;
+        width: auto;
+        height: fit-content;
+        overflow-y: hidden;
+    }
+
+    .creations-section {
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-bottom: 5vh;
+    }
+
+    .creations-section #our-creations-text {
+        min-width: 100vw;
+        padding-top: 4em;
+        padding-bottom: 0em;
+        margin-bottom: 0em;
+        padding-left: 1em;
+        color: rgb(32, 32, 32);
+        font-size: 2.6em;
+        text-align: left;
+    }
+
+    .creations-section img {
+        width: 20vw;
+        height: 40vh;
+
+        height: auto;
+        overflow: hidden;
+    }
+
+    .content-box {
+        flex-grow: 2;
+        flex-basis: 21%;
+        position: relative;
+        width: 20vw;
+        height: 60vh;
+
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        overflow: hidden;
+    }
+
+    .content-box p {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 60%;
+        left: 1em;
+        font-size: 2vw;
+    }
+
+    .button {
+        flex-basis: 100%;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    footer .logo {
+        position: absolute;
+        width: 150px;
+        left: 0;
+        margin-left: 6vw;
+        top: 5vh;
+    }
+
+    ul {
+        position: absolute;
+        top: 10vh;
+    }
+    li, a{
+        display: inline;
+        color: white;
+        padding-left: 1em;
+        font-family: Alata;
+        text-decoration: none;;
+    
+    }
+
+}
+
+/* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
